@@ -1,4 +1,6 @@
+import { config } from './config.js'
 import * as drive from './drive.js'
+import * as demo from './demo.js'
 
-// Storage backend (Google Drive). Kept behind a function so another backend can be swapped in.
-export const api = () => drive
+// Both backends export the same functions.
+export const api = () => (config.mode === 'demo' ? demo : drive)

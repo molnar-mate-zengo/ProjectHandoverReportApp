@@ -99,3 +99,14 @@ test('whois oldal feldolgozása', () => {
   assert.equal(huDomain('https://www.Pelda-Ceg.hu/rolunk'), 'pelda-ceg.hu')
   assert.equal(huDomain('pelda.com'), null)
 })
+
+test('demó mintaadatok érvényesek', async () => {
+  const { mintaSablonok, mintaProjekt } = await import('./minta.js')
+  const ids = new Set(mintaSablonok.blokkok.map(b => b.id))
+  for (const b of mintaSablonok.beszamolok) for (const id of b.blokkok) assert.ok(ids.has(id), `${b.id}: ismeretlen blokk ${id}`)
+  const p = mintaProjekt()
+  assert.equal(p.blokkok.domain.nemRelevans, true)
+  assert.equal(hianyos(forras(p.blokkok.seo), p.valtozok), true)
+  assert.equal(html(forras(p.blokkok.kozossegi), p.valtozok).includes('Facebook és Instagram'), true)
+  assert.ok(p.kihagyott.includes('webshop'))
+})

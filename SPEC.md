@@ -123,7 +123,7 @@ Az oldal A4-es nyomtatási CSS-t kap. A táblázat sorai nem törnek ketté olda
 
 ## Ütemezés
 
-**1. fázis:** a fenti funkciók, a sablonok a `sablonok.json` importjából. A demó mód mintaadatokkal a `feat/demo` ágon van.
+**1. fázis:** a fenti funkciók, a sablonok a `sablonok.json` importjából. Demó mód (csak böngésző) kitalált mintaadatokkal (`src/minta.js`) a Google beállítása előtti kipróbáláshoz.
 
 **2. fázis** (igény szerint):
 - sablonszerkesztő felület,

@@ -73,4 +73,4 @@ npm run dev     # http://localhost:5173
 npm test
 ```
 
-Client ID nélkül, mintaadatokkal a `feat/demo` ágon próbálható ki (demó mód, minden csak a böngészőben tárolódik).
+Client ID nélkül is kipróbálható a **Demó mód (mintaadatokkal)** gombbal: kitalált mintasablonokkal és egy mintaprojekttel indul, és minden csak a böngészőben tárolódik. A Beállításokban a „Mintaadatok visszaállítása” gomb visszaállítja a kezdőállapotot.

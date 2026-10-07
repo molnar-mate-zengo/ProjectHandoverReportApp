@@ -169,7 +169,7 @@ onMounted(async () => {
     <!-- Jelenlegi beállítás -->
     <section class="card space-y-3">
       <h2 class="font-medium">A gyökérmappa jelenlegi megosztása</h2>
-      <p v-if="config.mode !== 'drive'" class="text-sm text-slate-500">Előbb állítsd be a Drive mappát a Beállításokban.</p>
+      <p v-if="config.mode !== 'drive'" class="text-sm text-slate-500">Csak Google Drive módban látható. Demó módban nincs megosztás.</p>
       <p v-else-if="!api().auth.loggedIn" class="text-sm text-slate-500">Jelentkezz be a megtekintéshez.</p>
       <p v-else-if="hiba" class="text-sm text-red-600">{{ hiba }}</p>
       <p v-else-if="!megosztas" class="text-sm text-slate-500">Betöltés…</p>

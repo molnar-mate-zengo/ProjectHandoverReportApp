@@ -21,6 +21,7 @@ async function belep() {
     <header class="border-b border-slate-200 bg-white print:hidden">
       <div class="mx-auto flex max-w-5xl items-center gap-4 px-4 py-3">
         <RouterLink to="/" class="font-semibold text-slate-900">Projektátadási beszámoló</RouterLink>
+        <span v-if="config.mode === 'demo'" class="rounded bg-amber-100 px-2 py-0.5 text-xs font-medium text-amber-800">Demó mód – csak ebben a böngészőben</span>
         <span class="ml-auto text-sm text-slate-500">{{ config.mode === 'drive' ? auth.email : '' }}</span>
         <RouterLink to="/tarolo" class="btn relative px-2" active-class="!bg-indigo-50 !border-indigo-300 !text-indigo-700" title="Tároló struktúra" aria-label="Tároló struktúra">
           <Ikon nev="struktura" />
