@@ -36,7 +36,7 @@ Akinek nincs Google-fiókja: a <https://accounts.google.com/signup> oldalon a **
 
 1. A repóban: *Settings → Pages → Build and deployment → Source:* **GitHub Actions**.
 2. *Settings → Secrets and variables → Actions → Variables* fülön: **New repository variable**, a neve `GOOGLE_CLIENT_ID`, az értéke az 1. lépésben kimásolt Client ID.
-3. A `main` ágra érkező minden push után az oldal automatikusan frissül itt: `https://molnar-mate-zengo.github.io/ProjectHandoverReportApp/`
+3. A `feat/demo` ágra érkező minden push után az oldal automatikusan frissül itt: `https://molnar-mate-zengo.github.io/ProjectHandoverReportApp/` (a demó ág azért van kint, mert Google-beállítás nélkül is kipróbálható; élesítéskor a `.github/workflows/pages.yml` fájlban `main`-re kell átírni)
 
 ## 5. Első indítás
 

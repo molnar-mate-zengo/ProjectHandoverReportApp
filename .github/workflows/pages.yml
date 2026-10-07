@@ -1,8 +1,10 @@
 name: Deploy to GitHub Pages
 
+# The published site is the demo branch (usable without the Google setup). To publish the
+# production version instead, change this to [main] on both branches.
 on:
   push:
-    branches: [main]
+    branches: [feat/demo]
   workflow_dispatch:
 
 permissions:
